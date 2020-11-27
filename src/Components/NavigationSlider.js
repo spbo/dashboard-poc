@@ -7,7 +7,7 @@ const loadData = async () => {
   return res.json();
 };
 
-const SlideSection = () => {
+const NavigationSlider = () => {
   const INITIAL_IMAGE_INDEX = 0;
   const { data, error, isLoading } = useAsync({ promiseFn: loadData });
   let [slideImageIdx, setSlideImageIdx] = useState(INITIAL_IMAGE_INDEX);
@@ -46,13 +46,15 @@ const SlideSection = () => {
             onClick={() => imageClick(imagesCount)}
           />
         </div>
-        <ul className="little-circles">
+        <ul className="image-slider--identificator">
           {data.map((_, idx) => {
-            return (<li
-              className={`bullet-${
-                idx == slideImageIdx ? "active" : "inactive"
-              }`}
-            />);
+            return (
+              <li
+                className={`image-slider--bullet__${
+                  idx == slideImageIdx ? "active" : "inactive"
+                }`}
+              />
+            );
           })}
         </ul>
       </div>
@@ -61,7 +63,7 @@ const SlideSection = () => {
   return null;
 };
 
-export default SlideSection;
+export default NavigationSlider;
 
 // className={`bullet-active`}
 

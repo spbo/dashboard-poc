@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 
 const Section_Selections = (props) => {
   return (
-    <div className="sections-links-container">
+    <div className="body-page-section-selection">
       <NavLink
         to="/"
         className={
           props.sectionVisibilityKey.section1
-            ? "section-link_active"
-            : "section-link_inactive"
+            ? "body-page-section-selection--active"
+            : "body-page-section-selection--inactive"
         }
         onClick={() =>
           props.handleVisibilityKey({ section1: true, section2: false })
@@ -17,12 +17,12 @@ const Section_Selections = (props) => {
       >
         Section 1
         {props.sectionVisibilityKey.section1 ? (
-          <ul className="bullet-little-closer">
-            <li className="bullet-is-active" />
+          <ul className="body-page-section-selection-identificator">
+            <li className="body-page-section-selection-identificator--active" />
           </ul>
         ) : (
-          <ul className="bullet-little-closer">
-            <li className="bullet-is-inactive" />
+          <ul className="body-page-section-selection-identificator">
+            <li className="body-page-section-selection-identificator--inactive" />
           </ul>
         )}
       </NavLink>
@@ -30,8 +30,8 @@ const Section_Selections = (props) => {
         to="/"
         className={
           props.sectionVisibilityKey.section2
-            ? "section-link_active"
-            : "section-link_inactive"
+            ? "body-page-section-selection--active"
+            : "body-page-section-selection--inactive"
         }
         onClick={() =>
           props.handleVisibilityKey({ section1: false, section2: true })
@@ -39,12 +39,12 @@ const Section_Selections = (props) => {
       >
         Section 2
         {props.sectionVisibilityKey.section2 ? (
-          <ul className="bullet-little-closer">
-            <li className="bullet-is-active" />
+          <ul className="body-page-section-selection-identificator">
+            <li className="body-page-section-selection-identificator--active" />
           </ul>
         ) : (
-          <ul className="bullet-little-closer">
-            <li className="bullet-is-inactive" />
+          <ul className="body-page-section-selection-identificator">
+            <li className="body-page-section-selection-identificator--inactive" />
           </ul>
         )}
       </NavLink>

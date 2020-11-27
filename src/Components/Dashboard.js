@@ -36,15 +36,15 @@ const Dashboard = ({ section1 = true, section2 = false }) => {
   if (data)
     return (
       <RequestedData.Provider value={data}>
-        <div className="container">
-          <div className="descritpion" key={data[0].id} id={data[0].name}>
-            {data[0].description}
+        <div className="content-container">
+          <div className="body-page-descritpion" key={data[0].id} id={data[0].name}>
+            <h5>{data[0].description}</h5>
           </div>
           <Section_Selections
             handleVisibilityKey={handleVisibility}
             sectionVisibilityKey={sectionVisibility}
           />
-          <div className="box">
+          <div className="section-container">
             {sectionVisibility.section1 && <Section_1 />}
             {sectionVisibility.section2 && <Section_2 />}
           </div>

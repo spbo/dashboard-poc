@@ -5,16 +5,20 @@ const SearchComponent = (props) => {
   const [selectedOption, setselectedOption] = useState("");
 
   const customStyles = {
+    // container: (provided, state) => ({
+    //   ...provided,
+    //   height: "1rem"
+    // })
+    // , 
     control: (provided, state) => ({
       ...provided,
       background: "#3d3c3c",
       // borderColor: '#9e9e9e',
       border: "none",
-      // height: "30px",
+      height: "1px",
       // marginTop: "10px",
-      marginLeft: "50px",
-      width: "300px",
-      boxShadow: state.isFocused ? null : null
+      marginLeft: "8%",
+      width: "300px"
     }),
 
     valueContainer: (provided, state) => ({
@@ -38,6 +42,10 @@ const SearchComponent = (props) => {
       ...provided,
       background: "#3d3c3c",
       height: "30px"
+    }),
+    indicatorSeparator: (provided, state) => ({
+      ...provided,
+      display: "none"
     }),
     noOptionsMessage: (provided, state) => ({
       ...provided,
@@ -85,7 +93,7 @@ const SearchComponent = (props) => {
   return (
     <div>
       <Select value={selectedOption}
-      placeholder="Search"
+      placeholder=""
       isClearable={true}
       closeMenuOnSelect={true}
       onChange={e => onChange(e)}
