@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import RequestedData from "../Context/RequestedData-context";
 
+// Render the Section 1 Component
 const Section_1 = () => {
   const data = useContext(RequestedData);
 

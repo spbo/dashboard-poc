@@ -1,12 +1,14 @@
 import React from "react";
 import { useAsync } from "react-async";
 
+// make the API call
 const loadData = async () => {
   const res = await fetch("https://voda-react-assessment.herokuapp.com/page");
   if (!res.ok) throw new Error(res.statusText);
   return res.json();
 };
 
+// Render all Page 2
 const Page2 = () => {
   const { data, error, isLoading } = useAsync({ promiseFn: loadData });
 

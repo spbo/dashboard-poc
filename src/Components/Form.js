@@ -9,6 +9,7 @@ const Form = () => {
   const [psw, setPsw] = useState("");
   const [error, setError] = useState({phoneError: "", emailError: "", pswError: ""});
 
+  // handle user inputs - feed useStates
   const handleInput = e => {
     switch (e.target.name) {
       case "phone":
@@ -20,6 +21,7 @@ const Form = () => {
     }
   };
 
+  // initial validation rules
   const validation = {
     phone: /^(\+{1}[0-9]{2})?[2|6]{1}[0-9]{9}$/,
     email: /[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+(\.[a-z0-9-]+)*$/,
@@ -30,6 +32,7 @@ const Form = () => {
   const emailRegex= new RegExp(validation.email);
   const pswRegex = new RegExp(validation.psw);
   
+  // handle Form submition
   const handleFormSubmition = e => {
     e.preventDefault();
 

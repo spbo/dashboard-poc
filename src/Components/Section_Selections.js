@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+// Render the "Section 1" or "Section 2" link with its indetifier below it (active blue bullet)
 const Section_Selections = (props) => {
   return (
     <div className="body-page-section-selection">

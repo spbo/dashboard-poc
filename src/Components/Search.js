@@ -4,6 +4,7 @@ import Select from 'react-select';
 const SearchComponent = (props) => {
   const [selectedOption, setselectedOption] = useState("");
 
+  // Styling the Select bar component
   const customStyles = {
     // container: (provided, state) => ({
     //   ...provided,
@@ -77,11 +78,11 @@ const SearchComponent = (props) => {
     { value: 'page_2', label: 'Page 2' }
   ];
   
+  // used for passing the selected value through Routing down to the Dashboard Component to render the right Section
   const onChange = e => {
     setselectedOption("");
 
     if (e.value === 'home' || e.value === 'all' || e.value === 'section1') {
-      // console.log(`aloooo ${JSON.stringify(props)}`)
       props.history.push('/', { section1: true, section2: false });
     } else if (e.value === 'section2') {
       props.history.push('/', { section1: false, section2: true });

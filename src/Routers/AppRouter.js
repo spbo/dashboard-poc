@@ -8,6 +8,10 @@ import NotFoundPage from '../Components/NotFoundPage';
 
 export const history = createBrowserHistory();
 
+/* history prop is passing down to Search component through Header component.
+Then they pass to Dashboard and used for the visibility of Seciton 1 or 2.
+Also they used to route to the right page. */
+
 const AppRouter = () => (
   <Router history={history}>
     <div>

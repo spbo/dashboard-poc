@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import RequestedData from '../Context/RequestedData-context';
 import Form from './Form';
 
+// Render the Section 2 Component
 const Section_2 = () => {
 
   const data = useContext(RequestedData);
