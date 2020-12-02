@@ -19,7 +19,7 @@ const NavigationSlider = () => {
 
     slideImageIdx < imagesCount
       ? setSlideImageIdx(slideImageIdx++)
-      : setSlideImageIdx(0);
+      : setSlideImageIdx(INITIAL_IMAGE_INDEX);
   };
 
   if (isLoading) return "Loading...";
