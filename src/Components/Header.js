@@ -20,34 +20,32 @@ const Header = (props) => {
   if (data)
     return (
       <div className="header">
-        <div className="content-container">
-          <div className="header__content">
-            <div className="header__navigation">
-              <NavLink
-                to="/"
-                className="header__navigation-link--inactive"
-                activeClassName="header__navigation-link--active"
-                exact={true}
-              >
-                {data[0].title}
-                <ul className="header__navigation-identifier">
-                  <li />
-                </ul>
-              </NavLink>
-              <NavLink
-                to="/page_2"
-                className="header__navigation-link--inactive"
-                activeClassName="header__navigation-link--active"
-              >
-                {data[1].title}
-                <ul className="header__navigation-identifier">
-                  <li />
-                </ul>
-              </NavLink>
-              <Search history={props} />
-            </div>
-            <NavigationSlider />
+        <div className="header__content">
+          <div className="header__navigation">
+            <NavLink
+              to="/"
+              className="header__navigation-link--inactive"
+              activeClassName="header__navigation-link--active"
+              exact={true}
+            >
+              {data[0].title}
+              <ul className="header__navigation-identifier">
+                <li />
+              </ul>
+            </NavLink>
+            <NavLink
+              to="/page_2"
+              className="header__navigation-link--inactive"
+              activeClassName="header__navigation-link--active"
+            >
+              {data[1].title}
+              <ul className="header__navigation-identifier">
+                <li />
+              </ul>
+            </NavLink>
+            <Search history={props} />
           </div>
+          <NavigationSlider />
         </div>
       </div>
     );

@@ -43,7 +43,7 @@ const Dashboard = ({ section1 = true, section2 = false }) => {
           <div className="body-page-descritpion" key={data[0].id} id={data[0].name}>
             <h5>{data[0].description}</h5>
           </div>
-          <Section_Selections // 
+          <Section_Selections
             handleVisibilityKey={handleVisibility}
             sectionVisibilityKey={sectionVisibility}
           />
